@@ -1,0 +1,11 @@
+#N canvas 267 22 670 677 10;
+#X obj 129 518 output~;
+#X obj 130 311 d-reverb2~ 30 85;
+#X obj 130 473 clip~ 0.2 0.8;
+#X obj 129 257 adc~;
+#X connect 1 0 2 0;
+#X connect 1 1 2 0;
+#X connect 2 0 0 0;
+#X connect 2 0 0 1;
+#X connect 3 0 1 0;
+#X connect 3 1 1 1;

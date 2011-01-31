@@ -1,0 +1,4 @@
+#N canvas 0 22 450 300 10;
+#X obj 246 57 import maxlib;
+#X obj 189 131 netserver;
+#X text 97 11 always import a library like this;

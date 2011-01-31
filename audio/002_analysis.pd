@@ -1,0 +1,22 @@
+#N canvas 310 22 829 518 10;
+#X text 19 -221 take a closer look at your signal;
+#X obj 25 -162 adc~;
+#X obj 25 -141 fiddle~ 1024 1 20 3;
+#X obj 20 -43 timeroll;
+#X text 169 -142 fiddle analyses sound \, look here for more sound
+analysis objects;
+#X text 252 17 a graph of the amplitude over time \, look here for
+more info on arrays \, and graphs;
+#X obj 671 -151 pddp/helplink adc~;
+#X obj 671 -50 pddp/helplink fiddle~;
+#X obj 672 -37 pddp/helplink bonk~;
+#X obj 672 -25 pddp/helplink sigmund~;
+#X obj 672 -8 pddp/helplink bfft~;
+#X text 668 -208 links to help patches;
+#X obj 676 44 pddp/helplink timeroll;
+#X obj 677 62 pddp/helplink array;
+#X obj 679 76 pddp/helplink unauthorized/exciter;
+#X obj 676 92 pddp/helplink unauthorized/pianoroll;
+#X obj 675 108 pddp/helplink unauthorized/probalizer;
+#X connect 1 0 2 0;
+#X connect 2 3 3 0;

@@ -1,0 +1,17 @@
+#N canvas 309 99 589 701 10;
+#X declare -lib iem;
+#X text 7 3 connect a mic!;
+#X text 32 46 go to Pd-extended > Prefferences > Audio Settings...
+;
+#X obj 27 126 inputImage;
+#X text 31 86 select built in input;
+#X text 25 353 connect a microphone to your computer;
+#X obj 57 388 adc~;
+#X obj 73 432 osc~ 440;
+#X obj 57 481 *~;
+#X obj 57 531 output~;
+#X text 156 548 crank up the volume!;
+#X connect 5 0 7 0;
+#X connect 6 0 7 1;
+#X connect 7 0 8 0;
+#X connect 7 0 8 1;

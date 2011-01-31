@@ -1,0 +1,9 @@
+#N canvas 439 280 499 358 10;
+#X obj 102 102 mapping/timeroll;
+#X obj 139 47 mapping/autoscale 0 1;
+#X obj 102 82 mapping/resample 100;
+#X obj 137 15 inlet;
+#X connect 1 0 2 0;
+#X connect 2 0 0 0;
+#X connect 3 0 1 0;
+#X coords 0 -1 1 1 204 150 1 100 100;
