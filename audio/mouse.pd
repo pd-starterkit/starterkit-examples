@@ -1,0 +1,28 @@
+#N canvas 211 68 571 430 10;
+#X obj 79 155 cursor;
+#X obj 79 213 route x y;
+#X floatatom 66 237 5 0 0 0 x - -;
+#X floatatom 104 237 5 0 0 1 y - -;
+#X obj 79 60 tgl 25 0 empty empty empty 17 7 0 10 -204786 -1 -1 0 1
+;
+#X floatatom 138 291 5 0 0 1 mousewheel - -;
+#X obj 79 179 route motion mousewheel button;
+#X text 110 65 turn on to get mouse motion and buttons;
+#X obj 197 205 route 1 2 3;
+#X obj 197 225 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 218 225 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 239 225 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 260 224 <-- mouse buttons;
+#X connect 0 0 6 0;
+#X connect 1 0 2 0;
+#X connect 1 1 3 0;
+#X connect 4 0 0 0;
+#X connect 6 0 1 0;
+#X connect 6 1 5 0;
+#X connect 6 2 8 0;
+#X connect 8 0 9 0;
+#X connect 8 1 10 0;
+#X connect 8 2 11 0;

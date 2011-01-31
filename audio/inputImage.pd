@@ -1,0 +1,10 @@
+#N canvas 655 239 597 429 10;
+#X declare -lib iem;
+#X obj 103 103 iem_image /Users/sofyyuditskaya/Desktop/input.gif 0
+0 empty empty;
+#X msg 103 80 open /Users/sofyyuditskaya/Desktop/input.gif;
+#X obj 103 61 loadbang;
+#X obj 471 41 import iem;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;
+#X coords 0 -1 1 1 422 200 1 100 100;

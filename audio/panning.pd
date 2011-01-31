@@ -1,0 +1,11 @@
+#N canvas 307 55 471 349 10;
+#X obj 16 63 osc~ 440;
+#X obj 16 197 output~;
+#X obj 16 139 gpan~;
+#X obj 72 63 osc~ 220;
+#X text 13 -30 pan a sound;
+#X text 160 140 more on panners here;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;
+#X connect 2 1 1 1;
+#X connect 3 0 2 1;
