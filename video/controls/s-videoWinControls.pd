@@ -1,0 +1,152 @@
+#N canvas 158 207 866 561 10;
+#X obj 178 495 gemwin;
+#X msg 120 -1 destroy;
+#X msg 175 0 border \$1;
+#X msg 404 433 dimen 1200 900;
+#X msg 460 0 fullscreen \$1;
+#X msg 5 1 reset;
+#X msg 555 1 cursor \$1;
+#X msg 354 143 offset 1024 -40;
+#X obj 354 50 pack f f;
+#X obj 372 25 t b f;
+#X msg 354 73 set offset \$1 \$2;
+#X obj 404 316 pack f f;
+#X obj 413 291 t b f;
+#X msg 404 369 set dimen \$1 \$2;
+#X obj 413 255 int;
+#X obj 405 209 int;
+#X obj 362 97 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 362 116 delay 10;
+#X obj 412 410 delay 10;
+#X obj 52 -23 inlet;
+#X obj 120 -22 inlet;
+#X obj 175 -21 inlet;
+#X obj 405 184 inlet;
+#X obj 413 230 inlet;
+#X obj 372 1 inlet;
+#X obj 354 -22 inlet;
+#X obj 460 -22 inlet;
+#X obj 555 -23 inlet;
+#X obj 433 390 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 621 33 menubar \$1;
+#X msg 669 -5 -1;
+#X obj 621 -25 inlet;
+#X obj 716 -26 inlet;
+#X floatatom 716 -3 1 0 0 0 - - -;
+#X obj 716 31 sel 0;
+#X obj 757 31 sel 1;
+#X msg 716 53 0;
+#X msg 757 52 1;
+#X msg 52 -1 create \, 1;
+#X obj 669 -25 inlet;
+#X obj 5 -24 inlet;
+#X obj 803 -21 inlet;
+#X msg 754 378 frame 103;
+#X obj 772 226 int;
+#X obj 771 351 delay 10;
+#X obj 792 331 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 763 310 set frame \$1;
+#X obj 764 287 pack f;
+#X floatatom 820 111 5 0 0 0 - - -;
+#X obj 108 190 bng 20 250 50 0 empty empty reset 17 7 0 10 -204800
+-1 -1;
+#X obj 108 162 bng 20 250 50 0 empty empty empty 17 7 0 10 -204786
+-1 -1;
+#X obj 108 142 bng 20 250 50 0 empty empty empty 17 7 0 10 -261234
+-1 -1;
+#X obj 271 105 tgl 15 0 empty empty border_on/off 17 7 0 10 -262144
+-1 -1 0 1;
+#X obj 159 113 nbx 5 14 -1e+37 1e+37 0 0 empty empty offset_x 0 -8
+0 10 -262144 -1 -1 0 256;
+#X obj 160 142 nbx 5 14 -1e+37 1e+37 0 0 empty empty offset_y 0 -8
+0 10 -262144 -1 -1 0 256;
+#X obj 161 173 nbx 5 14 -1e+37 1e+37 0 0 empty empty screen_x 0 -8
+0 10 -262144 -1 -1 0 256;
+#X obj 161 202 nbx 5 14 -1e+37 1e+37 0 0 empty empty screen_y 0 -8
+0 10 -262144 -1 -1 0 256;
+#X obj 222 118 tgl 20 0 empty empty fullscreen_IO 17 7 0 10 -262130
+-1 -1 0 1;
+#X obj 222 137 tgl 15 0 empty empty cursor_IO 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 222 167 tgl 15 0 empty empty menuBar_IO 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 222 182 tgl 20 0 empty empty render_IO 17 7 0 10 -261682 -1
+-1 0 1;
+#X obj 222 152 bng 15 250 50 0 empty empty menuBar_Show_on_mouse_over
+17 7 0 10 -262144 -1 -1;
+#X obj 299 198 nbx 5 14 -1e+37 1e+37 0 0 empty empty framerate 0 -8
+0 10 -262144 -1 -1 0 256;
+#X obj 423 342 s screenXY;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 5 0 0 0;
+#X connect 6 0 0 0;
+#X connect 7 0 0 0;
+#X connect 8 0 10 0;
+#X connect 9 0 8 0;
+#X connect 9 1 8 1;
+#X connect 10 0 7 0;
+#X connect 10 0 16 0;
+#X connect 11 0 13 0;
+#X connect 11 0 63 0;
+#X connect 12 0 11 0;
+#X connect 12 1 11 1;
+#X connect 13 0 3 0;
+#X connect 13 0 28 0;
+#X connect 14 0 12 0;
+#X connect 15 0 11 0;
+#X connect 16 0 17 0;
+#X connect 17 0 7 0;
+#X connect 18 0 3 0;
+#X connect 19 0 38 0;
+#X connect 20 0 1 0;
+#X connect 21 0 2 0;
+#X connect 22 0 15 0;
+#X connect 23 0 14 0;
+#X connect 24 0 9 0;
+#X connect 25 0 8 0;
+#X connect 26 0 4 0;
+#X connect 27 0 6 0;
+#X connect 28 0 18 0;
+#X connect 29 0 0 0;
+#X connect 30 0 29 0;
+#X connect 31 0 29 0;
+#X connect 32 0 33 0;
+#X connect 33 0 35 0;
+#X connect 33 0 34 0;
+#X connect 34 0 36 0;
+#X connect 35 0 37 0;
+#X connect 36 0 0 0;
+#X connect 37 0 0 0;
+#X connect 38 0 0 0;
+#X connect 39 0 30 0;
+#X connect 40 0 5 0;
+#X connect 41 0 43 0;
+#X connect 41 0 48 0;
+#X connect 42 0 0 0;
+#X connect 43 0 47 0;
+#X connect 44 0 42 0;
+#X connect 45 0 44 0;
+#X connect 46 0 45 0;
+#X connect 46 0 42 0;
+#X connect 47 0 46 0;
+#X connect 49 0 5 0;
+#X connect 50 0 38 0;
+#X connect 51 0 1 0;
+#X connect 52 0 2 0;
+#X connect 53 0 8 0;
+#X connect 54 0 9 0;
+#X connect 55 0 15 0;
+#X connect 56 0 14 0;
+#X connect 57 0 4 0;
+#X connect 58 0 6 0;
+#X connect 59 0 30 0;
+#X connect 60 0 33 0;
+#X connect 61 0 29 0;
+#X connect 62 0 43 0;
+#X coords 0 -1 1 1 260 120 1 100 100;
