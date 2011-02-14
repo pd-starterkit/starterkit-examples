@@ -1,0 +1,41 @@
+#N canvas 448 255 802 458 10;
+#X obj 21 21 cnv 15 178 36 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X obj 28 26 comment 400 24 Helvetica Mouse 0 0 0 0 Mouse Position
+;
+#X obj 146 98 tgl 25 0 empty empty empty 17 7 0 10 -257985 -1 -1 0
+1;
+#X obj 146 134 cursor;
+#X obj 146 215 route motion mousewheel button;
+#X obj 127 256 route x y;
+#X floatatom 101 291 5 0 0 0 - - -;
+#X floatatom 152 291 5 0 0 0 - - -;
+#X floatatom 205 354 5 0 0 0 - - -;
+#X obj 264 256 route 1 2 3;
+#X obj 264 290 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 285 290 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 306 290 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 480 21 cnv 15 300 200 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 499 36 comment 250 12 Helvetica ? 0 0 0 0 Overview;
+#X text 177 101 Click here to begin;
+#X text 99 313 X;
+#X text 153 312 Y;
+#X text 263 311 Mouse buttons;
+#X text 203 381 Wheel;
+#X obj 481 238 cnv 15 300 200 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 498 257 comment 250 12 Helvetica ? 0 0 0 0 Links;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 4 1 8 0;
+#X connect 4 2 9 0;
+#X connect 5 0 6 0;
+#X connect 5 1 7 0;
+#X connect 9 0 10 0;
+#X connect 9 1 11 0;
+#X connect 9 2 12 0;
