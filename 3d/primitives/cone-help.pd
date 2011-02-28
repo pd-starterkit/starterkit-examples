@@ -1,0 +1,42 @@
+#N canvas 359 22 840 572 10;
+#X obj 184 222 cnv 15 100 60 empty empty empty 20 12 0 14 -24198 -66577
+0;
+#X msg 136 134 draw line;
+#X msg 136 165 draw fill;
+#X msg 136 197 draw point;
+#X obj 283 161 gemhead;
+#X floatatom 213 226 5 0 0 0 - - -;
+#X text 251 225 size;
+#X obj 253 186 rotateXYZ 90 0 0;
+#X floatatom 242 257 5 0 0 0 - - -;
+#X text 225 242 segments;
+#X obj 195 261 cone 1;
+#X obj 513 49 comment 250 12 Helvetica ? 0 0 0 0 Overview;
+#X obj 499 33 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 498 225 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 497 447 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 793 233 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 517 69 comment 320 12 Helvetica ? 0 0 0 0 [camera] is used to
+move a camera around in 3d space. Other objects in this patch are cube
+and world_light;
+#X obj 516 249 comment 250 12 Helvetica ? 0 0 0 0 Links;
+#X obj 50 48 comment 171 24 Helvetica Mouse 0 0 0 0 Cone;
+#X obj 351 426 gemwin_control;
+#X floatatom 360 163 5 0 0 0 - - -;
+#X floatatom 412 152 5 0 0 0 - - -;
+#X connect 1 0 10 0;
+#X connect 2 0 10 0;
+#X connect 3 0 10 0;
+#X connect 4 0 7 0;
+#X connect 5 0 10 1;
+#X connect 7 0 10 0;
+#X connect 8 0 10 2;
+#X connect 12 0 13 0;
+#X connect 13 0 15 0;
+#X connect 13 0 14 0;
+#X connect 20 0 7 1;
+#X connect 21 0 7 2;
