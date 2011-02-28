@@ -1,0 +1,21 @@
+#N canvas 400 319 802 458 10;
+#X obj 21 25 comment 400 24 Helvetica Mouse 0 0 0 0 Make a Sound;
+#X obj 492 35 comment 250 12 Helvetica ? 0 0 0 0 The [osc~] object
+plays a note.;
+#X obj 491 246 comment 250 12 Helvetica ? 0 0 0 0 Links;
+#X obj 466 27 cnv 1 1 400 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 466 223 cnv 1 300 1 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 195 161 osc~ 440;
+#X obj 195 247 output~;
+#X text 258 160 This plays a note;
+#X text 77 269 Adjust the volume;
+#X obj 491 268 helplink osc~;
+#X obj 491 286 helplink cos~;
+#X obj 491 305 helplink phasor~;
+#X obj 491 323 helplink noise~;
+#X obj 492 342 helplink output~;
+#X obj 492 360 helplink sigbinops;
+#X connect 5 0 6 0;
+#X connect 5 0 6 1;

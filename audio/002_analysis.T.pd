@@ -1,0 +1,28 @@
+#N canvas 395 336 802 458 10;
+#X obj 21 25 comment 400 24 Helvetica Mouse 0 0 0 0 Signal Analysis
+;
+#X obj 492 35 comment 250 12 Helvetica ? 0 0 0 0 [fiddle~] analyzes
+sound.;
+#X obj 491 154 comment 250 12 Helvetica ? 0 0 0 0 Links;
+#X obj 466 27 cnv 1 1 400 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 466 131 cnv 1 300 1 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 78 97 adc~;
+#X obj 78 138 fiddle~;
+#X obj 117 178 mapping/autoscale;
+#X obj 117 218 mapping/timeroll;
+#X obj 491 176 helplink adc~;
+#X obj 491 229 helplink bonk~;
+#X obj 491 247 helplink sigmund~;
+#X obj 492 266 helplink bfft~;
+#X obj 492 300 helplink timeroll;
+#X obj 491 210 helplink fiddle~;
+#X obj 492 337 helplink unauthorized/exciter;
+#X obj 493 356 helplink unauthorized/pianoroll;
+#X obj 493 374 helplink unauthorized/probalizer;
+#X obj 492 319 helplink array;
+#X text 115 374 A graph of amplitude over time;
+#X connect 5 0 6 0;
+#X connect 6 3 7 0;
+#X connect 7 0 8 0;
