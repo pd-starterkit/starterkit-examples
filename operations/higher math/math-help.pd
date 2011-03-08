@@ -1,4 +1,4 @@
-#N canvas 0 22 555 619 10;
+#N canvas 457 22 652 634 10;
 #X obj 0 595 cnv 15 552 21 empty \$0-pddp.cnv.footer empty 20 12 0
 14 -228856 -66577 0;
 #X obj 0 0 cnv 15 552 40 empty \$0-pddp.cnv.header (math_functions)
@@ -98,5 +98,9 @@ the previous value.);
 See their respective help patches (links above) for more info.);
 #X obj 4 597 pddp/pddplink all_about_help_patches.pd -text Usage Guide
 ;
+#X obj 551 -1 cnv 15 1 400 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 552 170 cnv 15 350 1 empty empty empty 20 12 0 14 -233017 -66577
+0;
 #X connect 26 0 28 0;
 #X connect 27 0 26 0;

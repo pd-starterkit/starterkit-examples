@@ -1,18 +1,5 @@
 #N canvas 361 216 690 473 10;
-#X text 452 8 GEM object;
-#X obj 9 265 cnv 15 430 145 empty empty empty 20 12 0 14 -233017 -66577
-0;
-#X text 40 267 Inlets:;
-#X text 39 352 Outlets:;
-#X obj 9 227 cnv 15 430 30 empty empty empty 20 12 0 14 -195568 -66577
-0;
-#X text 18 226 Arguments:;
-#X obj 8 56 cnv 15 430 165 empty empty empty 20 12 0 14 -233017 -66577
-0;
-#X obj 449 37 cnv 15 200 380 empty empty empty 20 12 0 14 -228992 -66577
-0;
-#X text 453 20 Example:;
-#X obj 450 339 cnv 15 100 60 empty empty empty 20 12 0 14 -195568 -66577
+#X obj 17 333 cnv 15 100 60 empty empty empty 20 12 0 14 -195568 -66577
 0;
 #N canvas 0 22 450 300 gemwin 0;
 #X obj 132 136 gemwin;
@@ -32,18 +19,16 @@
 #X connect 7 0 4 0;
 #X connect 7 1 6 0;
 #X connect 7 1 5 0;
-#X restore 455 378 pd gemwin;
-#X msg 455 359 destroy;
-#X text 451 338 Create window:;
-#X obj 451 133 cnv 15 185 120 empty empty empty 20 12 0 14 -24198 -66577
+#X restore 22 372 pd gemwin;
+#X msg 22 353 create;
+#X text 18 332 Create window:;
+#X obj 18 127 cnv 15 185 120 empty empty empty 20 12 0 14 -24198 -66577
 0;
-#X obj 451 43 gemhead;
-#X text 17 366 Outlet 1: gemlist;
-#X text 24 281 Inlet 1: gemlist;
-#X obj 451 260 pix_texture;
-#X obj 451 111 pix_film;
-#X obj 515 111 t f;
-#X obj 464 63 bng 25 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+#X obj 18 37 gemhead;
+#X obj 18 254 pix_texture;
+#X obj 18 105 pix_film;
+#X obj 82 105 t f;
+#X obj 31 57 bng 25 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
 -1;
 #N canvas 0 22 450 300 open 0;
 #X obj 85 49 inlet;
@@ -57,48 +42,27 @@
 #X connect 3 0 1 0;
 #X connect 4 0 1 0;
 #X connect 5 0 4 0;
-#X restore 464 91 pd open;
-#X text 505 37 open a supported;
-#X text 506 48 movie-clip;
-#X text 523 74 macOS: quicktime;
-#X text 516 64 windos: *.AVI;
-#X text 523 84 linux: depends...;
-#X floatatom 463 150 3 0 100 2 threshold - -;
-#X obj 463 167 / 100;
-#X text 71 31 Class: pix object (analysis);
-#X obj 451 282 square 4;
-#X msg 463 188 threshold \$1;
-#X floatatom 553 150 3 0 100 2 blobsize - -;
-#X obj 553 167 / 100;
-#X msg 553 188 blobSize \$1;
-#X text 24 296 Inlet 1: threshold <float>: minimum luminance of a pixel
-to be considered part of a blob. (default=0.04);
-#X text 24 325 Inlet 1: blobSize <float>: minimum relative size of
-a blob. (default=0.1);
-#X text 50 12 Synopsis: [pix_multiblob];
-#X text 30 58 Description: blob detector (for multiple blobs);
-#X text 16 73 [pix_multiblob] is able to detect multiple blobs within
-an image.;
-#X text 17 103 a "blob" is a number of adjacent(!) pixels with a luminance
-that is bigger than the value defined by "threshold". you can set the
-minimum size of a blob that is needed to be detected.;
-#X text 17 156 the output is a matrix following the conventions of
-the mtx-objects from zexy/iemmatrix. each row describes one detected
-blob as follows: centerX(weighted) \, centerY(weighted) \, size(weighted)
-\, minX \, minY \, maxX \, maxY \, size;
-#X text 64 237 int: max number N of blobs to detect;
-#X text 17 381 Outlet 2: (k \, 8) matrix: describing k detected blobs
-(with 0<=k<N);
-#X text 20 428 for motion-tracking you will also need;
-#X obj 304 425 pix_movement;
-#X floatatom 563 286 5 0 0 1 x - -;
-#X floatatom 564 302 5 0 0 1 y - -;
-#X floatatom 564 318 5 0 0 1 size - -;
-#X floatatom 565 334 5 0 0 1 minX - -;
-#X floatatom 565 350 5 0 0 1 minY - -;
-#X floatatom 566 366 5 0 0 1 maxX - -;
-#X floatatom 566 382 5 0 0 1 maxY - -;
-#X floatatom 567 398 5 0 0 1 area - -;
+#X restore 31 85 pd open;
+#X text 72 31 open a supported;
+#X text 76 40 movie-clip;
+#X text 90 68 macOS: quicktime;
+#X text 83 58 windos: *.AVI;
+#X text 90 78 linux: depends...;
+#X floatatom 30 144 3 0 100 2 threshold - -;
+#X obj 30 161 / 100;
+#X obj 18 276 square 4;
+#X msg 30 182 threshold \$1;
+#X floatatom 120 144 3 0 100 2 blobsize - -;
+#X obj 120 161 / 100;
+#X msg 120 182 blobSize \$1;
+#X floatatom 130 280 5 0 0 1 x - -;
+#X floatatom 131 296 5 0 0 1 y - -;
+#X floatatom 131 312 5 0 0 1 size - -;
+#X floatatom 132 328 5 0 0 1 minX - -;
+#X floatatom 132 344 5 0 0 1 minY - -;
+#X floatatom 133 360 5 0 0 1 maxX - -;
+#X floatatom 133 376 5 0 0 1 maxY - -;
+#X floatatom 134 392 5 0 0 1 area - -;
 #N canvas 0 22 687 354 showblob 0;
 #X obj 67 86 inlet blobinformation;
 #X msg 67 114 \$3 \$4 \$5 \$6 \$7 \$8 \$9 \$10;
@@ -171,35 +135,40 @@ blob as follows: centerX(weighted) \, centerY(weighted) \, size(weighted)
 #X connect 14 0 13 0;
 #X connect 15 0 12 0;
 #X connect 16 0 12 1;
-#X restore 541 261 pd showblob 1;
-#X msg 543 112 auto \$1;
-#X obj 604 114 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
+#X restore 108 255 pd showblob 1;
+#X msg 110 106 auto \$1;
+#X obj 171 108 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
 1;
-#X obj 451 222 pix_multiblob 6;
-#X connect 10 0 11 0;
-#X connect 11 0 10 0;
-#X connect 14 0 18 0;
-#X connect 17 0 30 0;
-#X connect 18 0 57 0;
-#X connect 18 2 19 0;
-#X connect 19 0 18 1;
+#X obj 18 216 pix_multiblob 6;
+#X obj 393 21 cnv 15 1 400 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 393 220 cnv 15 350 1 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 11 8 comment 171 24 Helvetica Mouse 0 0 0 0 Blob Detection;
+#X connect 1 0 2 0;
+#X connect 2 0 1 0;
+#X connect 5 0 7 0;
+#X connect 6 0 18 0;
+#X connect 7 0 34 0;
+#X connect 7 2 8 0;
+#X connect 8 0 7 1;
+#X connect 9 0 10 0;
+#X connect 10 0 7 0;
+#X connect 16 0 17 0;
+#X connect 17 0 19 0;
+#X connect 19 0 34 0;
 #X connect 20 0 21 0;
-#X connect 21 0 18 0;
-#X connect 27 0 28 0;
-#X connect 28 0 31 0;
-#X connect 31 0 57 0;
-#X connect 32 0 33 0;
-#X connect 33 0 34 0;
-#X connect 34 0 57 0;
-#X connect 54 0 46 0;
-#X connect 54 1 47 0;
-#X connect 54 2 48 0;
-#X connect 54 3 49 0;
-#X connect 54 4 50 0;
-#X connect 54 5 51 0;
-#X connect 54 6 52 0;
-#X connect 54 7 53 0;
-#X connect 55 0 18 0;
-#X connect 56 0 55 0;
-#X connect 57 0 17 0;
-#X connect 57 1 54 0;
+#X connect 21 0 22 0;
+#X connect 22 0 34 0;
+#X connect 31 0 23 0;
+#X connect 31 1 24 0;
+#X connect 31 2 25 0;
+#X connect 31 3 26 0;
+#X connect 31 4 27 0;
+#X connect 31 5 28 0;
+#X connect 31 6 29 0;
+#X connect 31 7 30 0;
+#X connect 32 0 7 0;
+#X connect 33 0 32 0;
+#X connect 34 0 6 0;
+#X connect 34 1 31 0;

@@ -1,6 +1,6 @@
 #N canvas 436 22 553 361 10;
-#X obj 17 11 cnv 15 500 100 empty empty OPERATIONS: 20 12 0 14 -233017
--66577 0;
+#X obj 469 7 cnv 15 1 400 empty empty empty 20 12 0 14 -233017 -66577
+0;
 #N canvas 58 106 794 296 operations-logiques-relationnelles 0;
 #X obj 41 146 &;
 #X obj 91 146 |;
@@ -72,7 +72,7 @@
 #X connect 27 0 9 1;
 #X connect 27 0 7 1;
 #X connect 27 0 8 1;
-#X restore 18 129 pd operations-logiques-relationnelles;
+#X restore 9 47 pd operations-logiques-relationnelles;
 #N canvas 0 22 795 354 operations-mathematiques 0;
 #X floatatom 31 72 5 0 0 0 - - -;
 #X obj 160 128 *;
@@ -120,7 +120,7 @@
 #X connect 15 0 18 0;
 #X connect 16 0 15 0;
 #X connect 17 0 15 1;
-#X restore 18 167 pd operations-mathematiques;
+#X restore 9 85 pd operations-mathematiques;
 #N canvas 29 79 932 301 operations-conditionnelles 0;
 #X floatatom 445 74 5 0 0 0 - - -;
 #X floatatom 504 74 5 0 0 0 - - -;
@@ -402,12 +402,12 @@ the time \, state 2 10% \, and state 3 20%.;
 #X connect 23 0 21 0;
 #X connect 31 0 30 1;
 #X connect 32 0 33 1;
-#X restore 18 205 pd operations-conditionnelles;
-#X text 322 129 > < != >= . . .;
-#X text 36 34 Pour aller plus loin dans les possibilites relationnelles
+#X restore 9 123 pd operations-conditionnelles;
+#X text 313 47 > < != >= . . .;
+#X text 6 12 Pour aller plus loin dans les possibilites relationnelles
 :;
-#X text 249 165 - + = / *;
-#X text 270 204 selection \, routage \, porte \, ...;
+#X text 240 83 - + = / *;
+#X text 261 122 selection \, routage \, porte \, ...;
 #N canvas 0 22 556 312 changementEchelles 0;
 #X text 11 3 But : passer un nombre qui va de 0 a 127 en un nombre
 entre 40 et 3000;
@@ -430,5 +430,7 @@ entre 40 et 3000;
 #X connect 11 0 4 0;
 #X connect 12 0 4 0;
 #X connect 13 0 4 0;
-#X restore 17 242 pd changementEchelles;
-#X text 204 243 objet [expr];
+#X restore 8 160 pd changementEchelles;
+#X text 195 161 objet [expr];
+#X obj 470 189 cnv 15 350 1 empty empty empty 20 12 0 14 -233017 -66577
+0;

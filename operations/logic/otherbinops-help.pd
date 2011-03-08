@@ -1,42 +1,14 @@
-#N canvas 0 22 555 619 10;
-#X obj 0 595 cnv 15 552 21 empty \$0-pddp.cnv.footer empty 20 12 0
-14 -228856 -66577 0;
+#N canvas 278 22 738 756 10;
 #X obj 0 0 cnv 15 552 40 empty \$0-pddp.cnv.header (binops2-3) 3 12
 0 18 -204280 -1 0;
 #X obj 0 178 cnv 3 550 3 empty \$0-pddp.cnv.inlets inlets 8 12 0 13
 -228856 -1 0;
-#N canvas 46 242 494 344 META 0;
-#X text 12 85 LIBRARY internal;
-#X text 12 125 WEBSITE http://crca.ucsd.edu/~msp/;
-#X text 12 45 LICENSE SIBSD;
-#X text 12 105 AUTHOR Miller Puckette;
-#X text 12 165 HELP_PATCH_AUTHORS This document was updated for Pd
-version 0.35 test 29 by Dave Sabine as part of a project called pddp
-proposed by Krzysztof Czaja to build comprehensive documentation for
-Pd. Revised by Jonathan Wilkes to conform to the PDDP template.;
-#X text 12 25 KEYWORDS control;
-#X text 12 65 DESCRIPTION relational and logical operators;
-#X text 12 5 NAME > >= == != <= < mod div & | << >> && || %;
-#X text 12 145 RELEASE_DATE 1997;
-#X restore 500 597 pd META;
 #X obj 0 301 cnv 3 550 3 empty \$0-pddp.cnv.outlets outlets 8 12 0
 13 -228856 -1 0;
 #X obj 0 338 cnv 3 550 3 empty \$0-pddp.cnv.argument arguments 8 12
 0 13 -228856 -1 0;
 #X obj 0 381 cnv 3 550 3 empty \$0-pddp.cnv.more_info more_info 8 12
 0 13 -228856 -1 0;
-#N canvas 69 435 428 156 Related_objects 0;
-#X obj 1 1 cnv 15 425 20 empty \$0-pddp.cnv.subheading empty 3 12 0
-14 -204280 -1 0;
-#X text 8 2 (binops2-3) Related Objects;
-#X text 138 57 - binary arithmetic operators;
-#X obj 19 57 pddp/pddplink operators-help.pd;
-#X obj 19 77 pddp/pddplink math-help.pd;
-#X text 138 77 - higher math in Pd;
-#X text 19 37 Links to other control operators;
-#X text 19 107 Links to signal operators;
-#X obj 19 127 pddp/pddplink sigbinops-help.pd;
-#X restore 102 598 pd Related_objects;
 #X obj 79 187 cnv 17 3 75 empty \$0-pddp.cnv.let.0 0 5 9 0 16 -228856
 -162280 0;
 #X text 98 309 float;
@@ -413,8 +385,6 @@ right inlet is non-zero \, THEN output non-zero!;
 #X restore 281 540 pd understanding_||_LOGICAL-OR;
 #X text 98 385 Relational Operators;
 #X text 278 385 Logical Operators;
-#X obj 4 597 pddp/pddplink all_about_help_patches.pd -text Usage Guide
-;
 #N canvas 75 34 428 577 Relational_Operators 0;
 #X obj 0 0 cnv 15 425 20 empty \$0-pddp.cnv.subheading empty 3 12 0
 14 -204280 -1 0;
@@ -514,8 +484,12 @@ word: 8 bits * 4 digits = 32-bits!;
 0 14 -204280 -1 0;
 #X text 7 81 What does "bitwise" mean?;
 #X restore 281 408 pd Logical_Operators;
-#X connect 31 0 33 0;
-#X connect 32 0 33 1;
-#X connect 33 0 34 0;
-#X connect 35 0 33 0;
-#X connect 47 0 33 0;
+#X obj 552 1 cnv 15 1 400 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 555 177 cnv 15 350 1 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X connect 28 0 30 0;
+#X connect 29 0 30 1;
+#X connect 30 0 31 0;
+#X connect 32 0 30 0;
+#X connect 44 0 30 0;

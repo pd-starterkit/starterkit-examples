@@ -1,9 +1,8 @@
-#N canvas 256 22 838 566 10;
-#X obj 21 21 cnv 15 178 36 empty empty empty 20 12 0 14 -262144 -66577
+#N canvas 253 29 846 456 10;
+#X obj 21 26 cnv 15 178 36 empty empty empty 20 12 0 14 -262144 -66577
 0;
-#X obj 28 26 comment 400 24 Helvetica Mouse 0 0 0 0 Mouse Position
-;
-#X obj 146 98 tgl 25 0 empty empty empty 17 7 0 10 -257985 -1 -1 1
+#X obj 28 0 comment 400 24 Helvetica Mouse 0 0 0 0 Mouse Position;
+#X obj 146 98 tgl 25 0 empty empty empty 17 7 0 10 -257985 -1 -1 0
 1;
 #X obj 146 134 cursor;
 #X obj 146 215 route motion mousewheel button;
@@ -11,17 +10,13 @@
 #X obj 264 256 route 1 2 3;
 #X obj 312 289 tgl 20 0 empty empty empty 17 7 0 10 -262130 -1 -1 0
 1;
-#X obj 493 29 comment 250 12 Helvetica ? 0 0 0 0 Overview;
+#X obj 493 0 comment 250 12 Helvetica ? 0 0 0 0 Overview;
 #X text 177 101 Click here to begin;
 #X text -3 367 X;
 #X text 104 369 Y;
 #X text 263 311 Mouse buttons;
 #X text 204 390 Wheel;
 #X obj 496 229 comment 250 12 Helvetica ? 0 0 0 0 Links;
-#X obj 479 13 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 478 205 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
 #X obj 288 289 tgl 20 0 empty empty empty 17 7 0 10 -262130 -1 -1 0
 1;
 #X obj 264 289 tgl 20 0 empty empty empty 17 7 0 10 -262130 -1 -1 0
@@ -29,26 +24,23 @@
 #X obj 103 344 pddp/print;
 #X obj -5 345 pddp/print;
 #X obj 205 367 pddp/print;
-#X obj 477 427 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
 #X obj 495 251 pddplink route-help.pd;
 #X obj 496 269 pddplink cursor-help.pd;
 #X obj 496 286 pddplink pddpprint-help.pd;
 #X obj 495 306 pddplink toggle-help.pd;
-#X obj 773 213 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 493 56 comment 320 12 Helvetica pd 0 0 0 0 can track your mouse
+#X obj 493 24 comment 320 12 Helvetica pd 0 0 0 0 can track your mouse
 position \, and button clicks through the [cursor] object;
+#X obj 481 211 cnv 1 350 1 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 481 5 cnv 1 1 400 empty empty empty 20 12 0 14 -233017 -66577
+0;
 #X connect 2 0 3 0;
 #X connect 3 0 4 0;
 #X connect 4 0 5 0;
-#X connect 4 1 21 0;
+#X connect 4 1 19 0;
 #X connect 4 2 6 0;
-#X connect 5 0 20 0;
-#X connect 5 1 19 0;
-#X connect 6 0 18 0;
-#X connect 6 1 17 0;
+#X connect 5 0 18 0;
+#X connect 5 1 17 0;
+#X connect 6 0 16 0;
+#X connect 6 1 15 0;
 #X connect 6 2 7 0;
-#X connect 15 0 16 0;
-#X connect 16 0 27 0;
-#X connect 16 0 22 0;
