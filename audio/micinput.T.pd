@@ -1,0 +1,24 @@
+#N canvas 524 184 802 458 10;
+#X obj 21 25 comment 400 24 Helvetica Mouse 0 0 0 0 Microphone Input
+;
+#X obj 492 35 comment 250 12 Helvetica ? 0 0 0 0 Audio input can be
+read into Pure Data.;
+#X obj 491 256 comment 250 12 Helvetica ? 0 0 0 0 Links;
+#X obj 466 27 cnv 1 1 400 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 466 237 cnv 1 300 1 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 78 118 adc~;
+#X obj 78 210 *~;
+#X obj 93 175 osc~ 440;
+#X obj 78 258 output~;
+#X obj 493 129 comment 250 12 Helvetica ? 0 0 0 0 Select built-in input
+;
+#X obj 493 92 comment 250 12 Helvetica ? 0 0 0 0 Go to Pd-extended
+> Preferences > Audio Settings;
+#X obj 492 64 comment 250 12 Helvetica ? 0 0 0 0 Connect a microphone
+to your computer;
+#X connect 5 0 6 0;
+#X connect 6 0 8 0;
+#X connect 6 0 8 1;
+#X connect 7 0 6 1;
