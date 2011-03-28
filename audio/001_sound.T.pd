@@ -1,5 +1,5 @@
 #N canvas 400 319 802 458 10;
-#X obj 21 25 comment 400 24 Helvetica Mouse 0 0 0 0 Make a Sound;
+#X obj 21 25 comment 400 24 Helvetica Mouse 0 0 0 0 Sound Output;
 #X obj 492 35 comment 250 12 Helvetica ? 0 0 0 0 The [osc~] object
 plays a note.;
 #X obj 491 246 comment 250 12 Helvetica ? 0 0 0 0 Links;
@@ -17,5 +17,7 @@ plays a note.;
 #X obj 491 323 helplink noise~;
 #X obj 492 342 helplink output~;
 #X obj 492 360 helplink sigbinops;
+#X obj 492 62 comment 250 12 Helvetica ? 0 0 0 0 [output~] is a graphical
+control for "compute audio" and volume .;
 #X connect 5 0 6 0;
 #X connect 5 0 6 1;

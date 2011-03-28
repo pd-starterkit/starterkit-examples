@@ -1,4 +1,4 @@
-#N canvas 524 184 802 458 10;
+#N canvas 154 43 802 458 10;
 #X obj 21 25 comment 400 24 Helvetica Mouse 0 0 0 0 Microphone Input
 ;
 #X obj 492 35 comment 250 12 Helvetica ? 0 0 0 0 Audio input can be
@@ -18,6 +18,8 @@ read into Pure Data.;
 > Preferences > Audio Settings;
 #X obj 492 64 comment 250 12 Helvetica ? 0 0 0 0 Connect a microphone
 to your computer;
+#X text 163 274 Crank up the volume!;
+#X text 126 361 array for visualization;
 #X connect 5 0 6 0;
 #X connect 6 0 8 0;
 #X connect 6 0 8 1;

@@ -1,0 +1,35 @@
+#N canvas 389 22 802 458 10;
+#X obj 21 25 comment 400 24 Helvetica Mouse 0 0 0 0 Keystrokes;
+#X obj 492 35 comment 250 12 Helvetica ? 0 0 0 0 The [key] \, [keyup]
+\, and [keyname] objects allow you to detect and view key presses.
+These can be used to control elements within a patch.;
+#X obj 491 246 comment 250 12 Helvetica ? 0 0 0 0 Links;
+#X obj 466 27 cnv 1 1 400 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 466 223 cnv 1 300 1 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 68 140 key;
+#X floatatom 68 171 5 0 0 0 - - -;
+#X obj 68 201 moocow/bytes2any;
+#X text 110 171 ASCII value;
+#X obj 491 268 helplink key;
+#X obj 491 289 helplink pddp/print;
+#X obj 492 310 helplink select;
+#X obj 249 140 keyup;
+#X obj 69 347 keyname;
+#X floatatom 69 378 5 0 0 0 - - -;
+#X symbolatom 108 378 10 0 0 0 - - -;
+#X obj 249 254 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+101;
+#X obj 249 170 select 116;
+#X text 22 88 Type to see keystroke information.;
+#X text 321 170 "t" key as toggle;
+#X text 124 344 [keyname] also registers non-printing characters.;
+#X obj 68 259 pddp/print;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 21 0;
+#X connect 12 0 17 0;
+#X connect 13 0 14 0;
+#X connect 13 1 15 0;
+#X connect 17 0 16 0;

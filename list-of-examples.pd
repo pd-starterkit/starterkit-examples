@@ -1,0 +1,11 @@
+#N canvas 189 242 456 425 10;
+#X text 43 30 pix_video;
+#X text 58 49 Opening video;
+#X text 45 155 math;
+#X text 61 176 How can we make it interesting?;
+#X text 45 215 conditionals;
+#X text 48 257 MIDI: introduce note numbers [mtof] [ftom];
+#X text 50 303 line~;
+#X text 59 116 Compute audio checkbox \, with volume control;
+#X text 44 93 (DONE) noise~ with output box to introduce sound output
+;

@@ -1,0 +1,28 @@
+#N canvas 603 216 802 458 10;
+#X obj 21 25 comment 400 24 Helvetica Mouse 0 0 0 0 MIDI and Frequency
+;
+#X obj 492 35 comment 250 12 Helvetica ? 0 0 0 0 The [ftom] object
+transposes a frequency in Hertz into a MIDI value.;
+#X obj 491 246 comment 250 12 Helvetica ? 0 0 0 0 Links;
+#X obj 466 27 cnv 1 1 400 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 466 223 cnv 1 300 1 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 261 362 output~;
+#X text 143 384 Adjust the volume;
+#X obj 491 305 helplink output~;
+#X obj 492 74 comment 250 12 Helvetica ? 0 0 0 0 The [mtof] object
+transposes a MIDI value into a frequency in Hertz.;
+#X floatatom 54 144 5 0 0 0 - - -;
+#X floatatom 54 249 5 0 0 0 - - -;
+#X obj 144 197 mtof;
+#X floatatom 144 144 5 0 0 0 - - -;
+#X floatatom 144 249 5 0 0 0 - - -;
+#X obj 54 197 ftom;
+#X text 51 110 Click and drag up or downward.;
+#X obj 491 268 helplink ftom;
+#X obj 491 286 helplink mtof;
+#X connect 9 0 14 0;
+#X connect 11 0 13 0;
+#X connect 12 0 11 0;
+#X connect 14 0 10 0;
