@@ -1,16 +1,16 @@
 #N canvas 389 22 826 553 10;
-#X obj 167 192 part_head;
-#X obj 167 328 part_draw;
-#X text 277 258 set the number per frame;
-#X text 291 290 set the age to kill at;
-#X text 296 110 the velocity domain;
-#X text 295 125 a sphere at 0 \, 0.2 \, 0;
-#X text 296 144 radius = 0.3;
-#X msg 271 170 0 0.2 0 0.3;
-#X msg 358 169 0.2 0 0 0.3;
-#X obj 167 228 part_velocity sphere 0 0.2 0 0.3;
-#X obj 167 261 part_source 20;
-#X obj 167 292 part_killold 50;
+#X obj 52 282 part_head;
+#X obj 52 418 part_draw;
+#X text 147 350 set the number per frame;
+#X text 161 382 set the age to kill at;
+#X text 266 197 the velocity domain;
+#X text 265 212 a sphere at 0 \, 0.2 \, 0;
+#X text 266 231 radius = 0.3;
+#X msg 241 257 0 0.2 0 0.3;
+#X msg 328 256 0.2 0 0 0.3;
+#X obj 52 318 part_velocity sphere 0 0.2 0 0.3;
+#X obj 52 351 part_source 20;
+#X obj 52 382 part_killold 50;
 #X obj 513 49 comment 250 12 Helvetica ? 0 0 0 0 Overview;
 #X obj 499 33 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -21,20 +21,20 @@
 #X obj 793 233 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 516 249 comment 250 12 Helvetica ? 0 0 0 0 Links;
-#X obj 49 46 comment 400 24 Helvetica Mouse 0 0 0 0 Particle System
+#X obj 49 30 comment 400 24 Helvetica Mouse 0 0 0 0 Particle System
 ;
-#X obj 355 427 gemwin_control;
+#X obj 321 33 gemwin_control;
 #X obj 513 69 comment 320 12 Helvetica ? 0 0 0 0 particle systems have
 amounts of particles to draw per frame \, and an age \, determined
 in also in frames? to be killed at. I don't know what the velocity
 shpere is. all pd objects need a gemhead at their start \, articles
 systems also need a particle head.;
-#X obj 517 286 pddplink part_head-help.pd;
-#X obj 517 307 pddplink part_velocity-help.pd;
-#X obj 513 327 pddplink part_source-help.pd;
-#X obj 515 347 pddplink part_killiod-help.pd;
-#X obj 511 367 pddplink part_draw-help.pd;
-#X obj 167 160 gemhead;
+#X obj 516 272 pddplink part_head-help.pd;
+#X obj 516 293 pddplink part_velocity-help.pd;
+#X obj 516 313 pddplink part_source-help.pd;
+#X obj 516 334 pddplink part_killiod-help.pd;
+#X obj 515 356 pddplink part_draw-help.pd;
+#X obj 52 80 gemhead;
 #X connect 0 0 9 0;
 #X connect 7 0 9 2;
 #X connect 8 0 9 2;

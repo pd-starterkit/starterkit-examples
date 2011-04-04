@@ -1,39 +1,27 @@
-#N canvas 239 32 1041 675 10;
-#X obj 151 364 camera;
-#X obj 157 68 gemhead;
-#X obj 68 134 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
+#N canvas 578 22 807 480 10;
+#X obj 200 429 camera;
+#X obj 334 177 tgl 15 0 empty empty empty 0 -6 0 8 -4034 -1 -1 0 1
 ;
-#X obj 139 133 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
-1;
-#X obj 213 138 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
-1;
-#X obj 267 135 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
-1;
-#X msg 213 154 left \$1;
-#X msg 267 151 right \$1;
-#X obj 26 228 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
-;
-#X obj 27 188 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
-;
-#X msg 27 204 up \$1;
-#X msg 26 244 down \$1;
-#X msg 23 151 reset;
-#X msg 139 150 forward \$1;
-#X msg 68 150 reverse \$1;
-#X msg 284 210 speed \$1;
-#X msg 284 286 lookX \$1;
-#X msg 284 329 lookY \$1;
-#X msg 284 367 lookZ \$1;
-#X msg 283 249 distance \$1;
-#X obj 286 354 hsl 128 15 -4 4 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
-#X obj 287 313 hsl 128 15 -4 4 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
-#X obj 286 272 hsl 128 15 -4 4 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
-#X obj 39 103 cube;
-#X obj 39 81 gemhead;
-#X obj 286 231 hsl 128 15 0.01 1 0 1 empty empty empty -2 -8 0 10 -262144
+#X msg 334 193 left \$1;
+#X msg 334 232 right \$1;
+#X msg 334 37 up \$1;
+#X msg 334 75 down \$1;
+#X msg 153 412 reset;
+#X msg 334 152 forward \$1;
+#X msg 334 113 reverse \$1;
+#X msg 334 273 speed \$1;
+#X msg 334 351 lookX \$1;
+#X msg 333 391 lookY \$1;
+#X msg 332 429 lookZ \$1;
+#X msg 334 311 distance \$1;
+#X obj 335 416 hsl 128 15 -4 4 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 6500 1;
+#X obj 336 376 hsl 128 15 -4 4 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 5800 1;
+#X obj 337 336 hsl 128 15 -4 4 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 12700 1;
+#X obj 18 212 gemhead;
+#X obj 337 296 hsl 128 15 0.01 1 0 1 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
 #X obj 503 39 comment 250 12 Helvetica ? 0 0 0 0 Overview;
 #X obj 489 23 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -44,45 +32,52 @@
 -1;
 #X obj 783 223 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 507 59 comment 320 12 Helvetica ? 0 0 0 0 [camera] is used to
+#X obj 504 59 comment 320 12 Helvetica ? 0 0 0 0 [camera] is used to
 move a camera around in 3d space. Other objects in this patch are cube
 and world_light;
 #X obj 506 239 comment 250 12 Helvetica ? 0 0 0 0 Links;
-#X obj 505 259 pddplink camera-help.pd;
-#X obj 507 280 pddplink world_light-help.pd;
-#X obj 506 302 pddplink cube-help.pd;
-#X obj 507 315 pddplink gemhead-help.pd;
-#X obj 507 336 pddplink gemwin-help.pd;
-#X obj 39 37 comment 171 24 Helvetica Mouse 0 0 0 0 Camera Position
-;
-#X obj 338 401 gemwin_control;
-#X obj 286 194 hsl 128 15 2 41 0 1 empty empty empty -2 -8 0 10 -262144
+#X obj 505 262 pddplink camera-help.pd;
+#X obj 506 281 pddplink world_light-help.pd;
+#X obj 506 297 pddplink cube-help.pd;
+#X obj 506 314 pddplink gemhead-help.pd;
+#X obj 507 331 pddplink gemwin-help.pd;
+#X obj 14 66 gemwin_control;
+#X obj 337 258 hsl 128 15 2 41 0 1 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
-#X connect 1 0 0 0;
-#X connect 2 0 14 0;
-#X connect 3 0 13 0;
-#X connect 4 0 6 0;
-#X connect 5 0 7 0;
+#X obj 12 19 comment 400 24 Helvetica ? 0 0 0 0 Camera Position;
+#X obj 18 428 cube 1;
+#X obj 200 213 gemhead 50;
+#X obj 334 217 tgl 15 0 empty empty empty 0 -6 0 8 -4034 -1 -1 0 1
+;
+#X obj 334 98 tgl 15 0 empty empty empty 0 -6 0 8 -4034 -1 -1 0 1;
+#X obj 334 137 tgl 15 0 empty empty empty 0 -6 0 8 -4034 -1 -1 0 1
+;
+#X obj 334 22 tgl 15 0 empty empty empty 0 -6 0 8 -4034 -1 -1 0 1;
+#X obj 334 60 tgl 15 0 empty empty empty 0 -6 0 8 -4034 -1 -1 0 1;
+#X connect 1 0 2 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 5 0 0 0;
 #X connect 6 0 0 0;
 #X connect 7 0 0 0;
-#X connect 8 0 11 0;
-#X connect 9 0 10 0;
+#X connect 8 0 0 0;
+#X connect 9 0 0 0;
 #X connect 10 0 0 0;
 #X connect 11 0 0 0;
 #X connect 12 0 0 0;
 #X connect 13 0 0 0;
-#X connect 14 0 0 0;
-#X connect 15 0 0 0;
-#X connect 16 0 0 0;
-#X connect 17 0 0 0;
-#X connect 18 0 0 0;
-#X connect 19 0 0 0;
-#X connect 20 0 18 0;
-#X connect 21 0 17 0;
-#X connect 22 0 16 0;
-#X connect 24 0 23 0;
-#X connect 25 0 19 0;
-#X connect 27 0 28 0;
-#X connect 28 0 30 0;
-#X connect 28 0 29 0;
-#X connect 40 0 15 0;
+#X connect 14 0 12 0;
+#X connect 15 0 11 0;
+#X connect 16 0 10 0;
+#X connect 18 0 13 0;
+#X connect 20 0 21 0;
+#X connect 21 0 23 0;
+#X connect 21 0 22 0;
+#X connect 32 0 9 0;
+#X connect 35 0 0 0;
+#X connect 36 0 3 0;
+#X connect 37 0 8 0;
+#X connect 38 0 7 0;
+#X connect 39 0 4 0;
+#X connect 40 0 5 0;

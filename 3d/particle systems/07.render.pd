@@ -1,4 +1,4 @@
-#N canvas 435 31 850 584 10;
+#N canvas 495 22 850 584 10;
 #X obj 71 100 gemhead;
 #X obj 71 128 part_head;
 #X text 197 309 set the number per frame;
@@ -10,7 +10,6 @@
 #X msg 347 223 0.2 0 0 0.3;
 #X obj 71 278 part_velocity sphere 0 0.2 0 0.3;
 #X obj 75 362 part_render;
-#X obj 70 527 sphere 0.2;
 #X obj 71 175 part_size 1;
 #X msg 161 152 2;
 #X obj 71 251 part_color;
@@ -28,14 +27,14 @@
 #X obj 813 253 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 536 269 comment 250 12 Helvetica ? 0 0 0 0 Links;
-#X obj 69 66 comment 400 24 Helvetica Mouse 0 0 0 0 Particle System
+#X obj 69 56 comment 400 24 Helvetica Mouse 0 0 0 0 Particle System
 ;
 #X obj 161 133 loadbang;
 #X obj 161 172 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 161 211 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 362 391 gemwin_control;
+#X obj 366 54 gemwin_control;
 #X obj 161 191 delay 100;
 #X obj 535 95 comment 320 12 Helvetica ? 0 0 0 0 this particle system
 has a [part_render] object as part of it \, that means you can wrap
@@ -55,32 +54,35 @@ textures to it.;
 #X connect 4 0 1 0;
 #X connect 4 1 1 0;
 #X restore 115 403 pd openpanel;
-#X msg 115 431 open /Users/sofyyuditskaya/Desktop/greg.jpeg;
+#X msg 115 431 open /Users/sofyyuditskaya/Desktop/f737dd6004d05bd1d2e43ab212e1f92c2a3c4ae5_m.jpg
+;
 #X obj 73 503 pix_texture;
+#X obj 70 527 sphere 0.2;
+#X text 196 379 open an image and map it to your particle system;
 #X connect 0 0 1 0;
-#X connect 1 0 12 0;
+#X connect 1 0 11 0;
 #X connect 7 0 9 2;
 #X connect 8 0 9 2;
-#X connect 9 0 16 0;
-#X connect 10 0 32 0;
-#X connect 12 0 14 0;
-#X connect 13 0 12 1;
-#X connect 14 0 9 0;
-#X connect 15 0 14 1;
-#X connect 16 0 17 0;
-#X connect 17 0 10 0;
-#X connect 18 0 14 2;
+#X connect 9 0 15 0;
+#X connect 10 0 31 0;
+#X connect 11 0 13 0;
+#X connect 12 0 11 1;
+#X connect 13 0 9 0;
+#X connect 14 0 13 1;
+#X connect 15 0 16 0;
+#X connect 16 0 10 0;
+#X connect 17 0 13 2;
+#X connect 19 0 20 0;
+#X connect 20 0 22 0;
 #X connect 20 0 21 0;
-#X connect 21 0 23 0;
-#X connect 21 0 22 0;
-#X connect 26 0 13 0;
-#X connect 26 0 27 0;
-#X connect 27 0 30 0;
-#X connect 28 0 15 0;
-#X connect 28 0 18 0;
-#X connect 30 0 28 0;
-#X connect 32 0 36 0;
+#X connect 25 0 12 0;
+#X connect 25 0 26 0;
+#X connect 26 0 29 0;
+#X connect 27 0 14 0;
+#X connect 27 0 17 0;
+#X connect 29 0 27 0;
+#X connect 31 0 35 0;
+#X connect 32 0 33 0;
 #X connect 33 0 34 0;
-#X connect 34 0 35 0;
-#X connect 35 0 32 0;
-#X connect 36 0 11 0;
+#X connect 34 0 31 0;
+#X connect 35 0 36 0;
